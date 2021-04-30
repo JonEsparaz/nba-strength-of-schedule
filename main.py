@@ -118,6 +118,13 @@ if __name__ == '__main__':
     ax2.set_yticks(np.arange(1, len(teams_end) + 1))
     ax2.set_yticklabels(teams_end, font='Franklin Gothic Book', fontsize=12)
 
-    plt.title('2020-2021 NBA Season: Strength of Schedule Over Last 8 Games',
+    title_extra = ''
+
+    if args.conference == 'W':
+        title_extra = ' (Western Conference)'
+    if args.conference == 'E':
+        title_extra = ' (Eastern Conference)'
+
+    plt.title('2020-2021 NBA Season: Strength of Schedule Over Last 8 Games' + title_extra,
               font='Franklin Gothic Book', fontsize=20)
     plt.show()
