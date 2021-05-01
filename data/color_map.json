@@ -1,4 +1,4 @@
-cmap = {
+{
     "Charlotte Hornets": "#157C9D",
     "Detroit Pistons": "#C61533",
     "Houston Rockets": "#C02236",
@@ -28,5 +28,5 @@ cmap = {
     "Phoenix Suns": "#F79F31",
     "San Antonio Spurs": "#BEC7CC",
     "Philadelphia 76ers": "#E91E4E",
-    "Los Angeles Lakers": "#61357B",
+    "Los Angeles Lakers": "#61357B"
 }

@@ -3,9 +3,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from scipy.interpolate import interp1d
 from collections import defaultdict
-from cmap import cmap
-from east_west import east_west
 import argparse
+import json
 
 
 def parse_record(record: str) -> float:
@@ -18,12 +17,18 @@ if __name__ == '__main__':
     parser.add_argument('--conference', default="")
     args = parser.parse_args()
 
-    standings = pd.read_csv('standings.csv')
+    standings = pd.read_csv('data/standings.csv')
     standings = standings.set_index('Team')
 
     strength_of_schedule = defaultdict(list)
 
-    games_in_may = pd.read_csv('may.csv')
+    games_in_may = pd.read_csv('data/may.csv')
+
+    with open('data/color_map.json') as json_file:
+        cmap = json.load(json_file)
+
+    with open('data/east_west.json') as json_file:
+        east_west = json.load(json_file)
 
     for _, game in games_in_may.iterrows():
         # determine strength of opponents

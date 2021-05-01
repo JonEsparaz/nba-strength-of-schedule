@@ -1,4 +1,4 @@
-east_west = {
+{
     "Charlotte Hornets": "E",
     "Detroit Pistons": "E",
     "Houston Rockets": "W",
@@ -28,5 +28,5 @@ east_west = {
     "Phoenix Suns": "W",
     "San Antonio Spurs": "W",
     "Philadelphia 76ers": "E",
-    "Los Angeles Lakers": "W",
+    "Los Angeles Lakers": "W"
 }
